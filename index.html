@@ -1,0 +1,177 @@
+<!--
+  Portfolio - Single-file HTML/CSS/JS
+  How to use: Save this as `index.html` and open in a browser.
+  Replace text, images, and links with your own content. Sections include: Hero, About, Skills, Projects, Services, Testimonials, Contact, Footer.
+  Created for: Sana Waseem (kashf.io)
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sana Waseem — Portfolio</title>
+  <meta name="description" content="Sana Waseem — Urdu & Math Teacher | Certified Digital Marketer | Graphic Designer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:16px; --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#04102b 0%, #081528 100%);color:#e6eef8}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5b21b6);display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+    .brand h1{font-size:18px;margin:0}
+    nav{display:flex;gap:14px}
+    nav a{padding:10px 12px;border-radius:10px;color:var(--muted);font-weight:600}
+    nav a.cta{background:var(--accent);color:white}
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
+    .card{background:var(--card);padding:28px;border-radius:20px;box-shadow:0 4px 28px rgba(2,6,23,0.7);}
+    .intro h2{margin:0 0 8px 0;font-size:28px}
+    .intro p{margin:0 0 18px;color:var(--muted);line-height:1.5}
+    .btn-row{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#4c1d95);color:white;border:none}
+    .profile{display:flex;flex-direction:column;gap:18px;align-items:center}
+    .avatar{width:220px;height:220px;border-radius:18px;background:linear-gradient(180deg,#10293f,#062034);display:flex;align-items:center;justify-content:center;font-size:42px;color:var(--muted)}
+    .kpi{display:flex;gap:12px}
+    .kpi .item{background:var(--glass);padding:12px;border-radius:12px;text-align:center;width:110px}
+    .kpi strong{display:block;font-size:18px}
+    /* sections */
+    section{margin-top:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skills .list{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+    .projects .project{display:flex;gap:12px;align-items:center}
+    .project img{width:120px;height:80px;border-radius:8px;object-fit:cover}
+    .contact form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    footer{margin-top:28px;color:var(--muted);text-align:center;padding:18px 0}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} .profile{order:-1} .avatar{width:160px;height:160px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SW</div>
+        <div>
+          <h1>Sana Waseem</h1>
+          <div style="color:var(--muted);font-size:13px">Urdu & Math Teacher • Digital Marketer • Designer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="card intro">
+          <h2>Hi, I'm Sana — I teach, design, and grow online.</h2>
+          <p>I specialise in teaching Urdu & Math for classes 1–8, creating high‑reach Facebook ads, and designing logos & thumbnails. I have 10 years of home tuition experience and run the brand <strong>kashf.io</strong>.</p>
+          <div class="btn-row">
+            <button class="btn primary">Hire me</button>
+            <button class="btn">Download CV</button>
+          </div>
+
+          <section id="about">
+            <h3>About me</h3>
+            <p style="color:var(--muted)">I'm a graduate from Karachi University with a passion for teaching and digital design. I combine pedagogical skills with digital marketing to help students and small businesses grow.</p>
+          </section>
+
+          <section class="skills">
+            <h3>Skills</h3>
+            <div class="list">
+              <div class="skill">Urdu Teaching</div>
+              <div class="skill">Mathematics (1-8)</div>
+              <div class="skill">Facebook Ads</div>
+              <div class="skill">Graphic Design</div>
+              <div class="skill">Logo & Thumbnail</div>
+              <div class="skill">Canva</div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">SW</div>
+          <div style="text-align:center">
+            <div style="font-weight:700">Sana Waseem</div>
+            <div style="color:var(--muted);font-size:13px">Teacher · Marketer · Designer</div>
+          </div>
+
+          <div class="kpi">
+            <div class="item"><strong>10+</strong><span style="display:block;color:var(--muted)">Years</span></div>
+            <div class="item"><strong>100+</strong><span style="display:block;color:var(--muted)">Students</span></div>
+            <div class="item"><strong>kashf.io</strong><span style="display:block;color:var(--muted)">Brand</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="projects" class="projects">
+        <h3>Projects</h3>
+        <div class="grid-3">
+          <div class="card project">
+            <img src="https://picsum.photos/seed/p1/400/300" alt="project 1">
+            <div>
+              <strong>Canva Portfolio</strong>
+              <div style="color:var(--muted)">A polished portfolio created with Canva showcasing design work.</div>
+            </div>
+          </div>
+
+          <div class="card project">
+            <img src="https://picsum.photos/seed/p2/400/300" alt="project 2">
+            <div>
+              <strong>Facebook Ad Campaign</strong>
+              <div style="color:var(--muted)">High-reach ad campaign with strong impressions and engagement.</div>
+            </div>
+          </div>
+
+          <div class="card project">
+            <img src="https://picsum.photos/seed/p3/400/300" alt="project 3">
+            <div>
+              <strong>Teaching Resources</strong>
+              <div style="color:var(--muted)">Lesson plans and printable worksheets for classes 1–8.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h3>Contact</h3>
+        <div class="card">
+          <form>
+            <input placeholder="Your name" style="padding:10px;border-radius:8px;border:none;margin-bottom:8px;width:100%">
+            <input placeholder="Email" style="padding:10px;border-radius:8px;border:none;margin-bottom:8px;width:100%">
+            <textarea placeholder="Message" style="padding:10px;border-radius:8px;border:none;width:100%;height:120px"></textarea>
+            <div style="margin-top:10px;text-align:right">
+              <button class="btn primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Sana Waseem • kashf.io — Available for online & local tuition
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Hook up buttons (example behavior)
+    document.querySelectorAll('.btn').forEach(b => b.addEventListener('click', e => {
+      if(b.classList.contains('primary')) alert('Thanks — please email me at hello@kashf.io to start.');
+    }));
+  </script>
+</body>
+</html>
